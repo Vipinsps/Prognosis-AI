@@ -1,9 +1,9 @@
 import { Box, Button, Typography, capitalize } from "@mui/material";
 import AddSymptoms from "./AddSymptoms";
-import Chip from "@mui/material/Chip";
-import Stack from "@mui/material/Stack";
+
 import { useEffect, useState } from "react";
 import { allSymptomsList, sampleSymptomData } from "../symptomsData";
+import { ReactComponent as Logo } from '../assets/logo.svg'
 
 export default function GetPrediction() {
   const [selectedSymptoms, setSelectedSymptoms] = useState([]);
@@ -49,15 +49,20 @@ export default function GetPrediction() {
         background: "white",
       }}
     >
+       <Box display={"flex"} justifyContent={"center"} mb={2}>
+        <Logo  />
+      </Box>
+
       <Box
         border={"1px solid"}
         borderRadius={"10px"}
-        backgroundColor={"#1976d2"}
         padding={"5px"}
         mb={"1rem"}
         width={"fit-content"}
         display={"flex"}
         alignSelf={"center"}
+        backgroundColor={"#1976d2"}
+
       >
         <Typography
           component={"h1"}
